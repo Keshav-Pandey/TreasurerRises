@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Treasurer Rises</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <link href="autocomplete-0.3.0.min.css" rel="stylesheet" />
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body onLoad="drawPallet()">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Treasurer Rises</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu message-dropdown">
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-footer">
+                            <a href="#">Read All New Messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+                    </li>
+                    <li>
+                        <a href="currencies.html"><i class="fa fa-fw fa-table"></i> Currency Pairs</a>
+                    </li>
+                    <li>
+                        <a href="creditors.html"><i class="fa fa-fw fa-file"></i> Debitors & Creditors</a>
+                    </li>
+                    <li>
+                        <a href="statements.html"><i class="fa fa-fw fa-file"></i> Statements</a>
+                    </li>
+                    <li>
+                        <a href="fundman.html"><i class="fa fa-fw fa-file"></i> Fund Manager</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Dashboard <small>Accounts Overview</small>
+                        </h1>
+                        <div id="search_bar" style="widht:300px;"><div class="autocomplete-container-7a26d"><div class="placeholder-d722a"></div><div class="tokens-6a7a0"></div><input class="input-8f2fe" type="text" style="background-color:white;"><div class="clear-53545"></div><ul class="dropdown-a3d44" style="display: none;"></ul></div><span class="input-width-proxy-1c13e" style="position:absolute; top:-9999px;"></span></div>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-dashboard"></i> Dashboard
+                            </li>
+                            <li>
+                                <select id="homeCurr" onchange="changeBase()">
+                                    <option id="USD" default>GBP</option>
+                                    <option id="INR">INR</option>
+                                    <option id="EUR">EUR</option>
+                                    <option id="USD">USD</option>
+                                </select>
+                            </li>
+                        </ol>
+                        <div id="search_bar"><div class="autocomplete-container-7a26d"><div class="placeholder-d722a"></div><div class="tokens-6a7a0"></div><input class="input-8f2fe" type="text" ><div class="clear-53545"></div><ul class="dropdown-a3d44" style="display: none;"></ul></div><span class="input-width-proxy-1c13e" style="position:absolute; top:-9999px;"></span></div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-m-9 text-center">
+                                        <div style="font-size:17px;">Current Accounts</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table text-center" id="currentDiv" border="1">
+                            </table>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-m-9 text-center">
+                                        <div style="font-size:17px;">Deposit Accounts</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table text-center" id="depositDiv" border="1">
+                            </table>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-m-9 text-center">
+                                        <div style="font-size:17px;">Credit Card Accounts</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table text-center" id="creditDiv" border="1">
+                            </table>
+                        </div>
+                    </div>
+            </div>                    
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="accounts.js"></script>
+    <script>
+        var USDCT = 0;var USDDT = 0;var USDCCT = 0;
+        var INRCT = 0;var INRDT = 0;var INRCCT = 0;
+        var EURCT = 0;var EURDT = 0;var EURCCT = 0;
+        var GBPCT = 0;var GBPDT = 0;var GBPCCT = 0;
+        for(var i=0;i<accounts.accounts.length;i++){
+            value = accounts.accounts[i];
+            if(value.account_type=="current account"){
+                if(value.base_currency=="USD")
+                    USDCT+=value.balance;
+                else if(value.base_currency=="INR")
+                    INRCT+=value.balance;
+                else if(value.base_currency=="EUR")
+                    EURCT+=value.balance;
+                else if(value.base_currency=="GBP")
+                    GBPCT+=value.balance;
+            }
+            else if(value.account_type=="deposit account"){
+                if(value.base_currency=="USD")
+                    USDDT+=value.balance;
+                else if(value.base_currency=="INR")
+                    INRDT+=value.balance;
+                else if(value.base_currency=="EUR")
+                    EURDT+=value.balance;
+                else if(value.base_currency=="GBP")
+                    GBPDT+=value.balance;
+            }
+            else if(value.account_type=="credit account"){
+                if(value.base_currency=="USD")
+                    USDCCT+=value.balance;
+                else if(value.base_currency=="INR")
+                    INRCCT+=value.balance;
+                else if(value.base_currency=="EUR")
+                    EURCCT+=value.balance;
+                else if(value.base_currency=="GBP")
+                    GBPCCT+=value.balance;
+            }
+        }
+        runGBP();
+        function runGBP(){
+        var cd = document.getElementById("currentDiv");
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (GBP) : "+ GBPCT;
+        tr.appendChild(td);
+        document.getElementById("currentDiv").appendChild(tr);
+        //USD 
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (USD) : "+ USDCT;
+        tr.appendChild(td);
+        //INR
+        document.getElementById("currentDiv").appendChild(tr);
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (INR) : "+ INRCT;
+        tr.appendChild(td);
+        document.getElementById("currentDiv").appendChild(tr);
+        //EUR 
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (EUR) : "+ EURCT;
+        tr.appendChild(td);
+        document.getElementById("currentDiv").appendChild(tr);
+
+        //Deposit
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (GBP) : "+ GBPDT;
+        tr.appendChild(td);
+        document.getElementById("depositDiv").appendChild(tr);
+        //USD 
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (USD) : "+ USDDT;
+        tr.appendChild(td);
+        //INR
+        document.getElementById("depositDiv").appendChild(tr);
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (INR) : "+ INRDT;
+        tr.appendChild(td);
+        document.getElementById("depositDiv").appendChild(tr);
+        //EUR 
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (EUR) : "+ EURDT;
+        tr.appendChild(td);
+        document.getElementById("depositDiv").appendChild(tr);
+
+        //Credit
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (GBP) : "+ GBPCCT;
+        tr.appendChild(td);
+        document.getElementById("creditDiv").appendChild(tr);
+        //USD 
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (USD) : "+ USDCCT;
+        tr.appendChild(td);
+        //INR
+        document.getElementById("creditDiv").appendChild(tr);
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (INR) : "+ INRCCT;
+        tr.appendChild(td);
+        document.getElementById("creditDiv").appendChild(tr);
+        //EUR 
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.style.fontSize="15px";
+        td.innerHTML="Balance in  (EUR) : "+ EURCCT;
+        tr.appendChild(td);
+        document.getElementById("creditDiv").appendChild(tr);
+        }
+
+        var curRatio = {"INR":86.436,"USD":1.2974,"EUR":1.1569};
+        function changeBase()
+        {
+            if(document.getElementById("homeCurr").value=="GBP")
+            {
+                document.getElementById("currentDiv").innerHTML="";
+                document.getElementById("depositDiv").innerHTML="";
+                document.getElementById("creditDiv").innerHTML="";
+                runGBP();
+            }
+            else if(document.getElementById("homeCurr").value=="EUR"){
+                document.getElementById("currentDiv").innerHTML="";
+                document.getElementById("depositDiv").innerHTML="";
+                document.getElementById("creditDiv").innerHTML="";
+                write("EUR");
+            }
+            else if(document.getElementById("homeCurr").value=="INR"){
+                document.getElementById("currentDiv").innerHTML="";
+                document.getElementById("depositDiv").innerHTML="";
+                document.getElementById("creditDiv").innerHTML="";
+                write("INR");
+            }
+            else if(document.getElementById("homeCurr").value=="USD"){
+                document.getElementById("currentDiv").innerHTML="";
+                document.getElementById("depositDiv").innerHTML="";
+                document.getElementById("creditDiv").innerHTML="";
+                write("USD");
+            }
+        }
+        function write(cu){
+            if(cu=="EUR"){
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPCT*curRatio.EUR;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDCT/curRatio.USD*curRatio.EUR;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRCT*curRatio.INR/curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("currentDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURCT;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPDT*curRatio.EUR;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDDT/curRatio.USD*curRatio.EUR;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRDT*curRatio.INR/curRatio.EUR;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("depositDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURDT;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPCCT*curRatio.EUR;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDCCT/curRatio.USD*curRatio.EUR;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRCCT/curRatio.INR*curRatio.EUR;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("creditDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURCCT;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+            }
+            else if(cu=="INR"){
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPCT*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDCT/curRatio.USD*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRCT;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("currentDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURCT/curRatio.EUR*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPCCT*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDCCT/curRatio.USD*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRCCT;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("depositDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURCCT/curRatio.EUR*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPCCT*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDCCT/curRatio.USD*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRCCT;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("creditDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURCCT/curRatio.EUR*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+            }
+            else if(cu=="USD"){
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPCT*curRatio.USD;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDCT;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRCT/curRatio.INR*curRatio.USD;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("currentDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURCT/curRatio.GBP*curRatio.USD;
+                tr.appendChild(td);
+                document.getElementById("currentDiv").appendChild(tr);
+
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPCCT*curRatio.USD;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDCCT;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRCCT/curRatio.INR*curRatio.USD;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("depositDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURCCT/curRatio.EUR*curRatio.INR;
+                tr.appendChild(td);
+                document.getElementById("depositDiv").appendChild(tr);
+
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (GBP) : "+ GBPCCT*curRatio.USD;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.style.fontSize="15px";
+                td.innerHTML="Balance in  (USD) : "+ USDCCT;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML="Balance in  (INR) : "+ INRCCT/curRatio.INR*curRatio.USD;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                document.getElementById("creditDiv").appendChild(tr);
+                td.innerHTML="Balance in  (EUR) : "+ EURCCT/curRatio.EUR/curRatio.USD;
+                tr.appendChild(td);
+                document.getElementById("creditDiv").appendChild(tr);
+            }
+        }
+    </script>
+    <script src="commandPallet.js"></script>
+    <script src="autocomplete-0.3.0.min.js"></script>
+    <script src="jquery-1.8.2.min.js"></script>
+</body>
+</html>
